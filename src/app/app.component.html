@@ -17,6 +17,20 @@
     <label for="repassword">Re-Password</label>
     <input id="repassword" formControlName="repassword" class="form-control" type="password" name="repassword">
   </div>
+  <div formGroupName="address">
+  <div class="form-group">
+    <label for="city">City</label>
+    <input id="city" formControlName="city" class="form-control" type="city" name="city">
+  </div>
+  <div class="form-group">
+    <label for="state">state</label>
+    <input id="state" formControlName="state" class="form-control" type="text" name="state">
+  </div>
+  <div class="form-group">
+    <label for="postalcode">Postal Code</label>
+    <input id="postalcode" formControlName="postalcode" class="form-control" type="text" name="postalcode">
+  </div>
+</div>
   <button type="submit" class="btn btn-success">Submit</button>
 </form>
 {{registrationForm.value | json}}
