@@ -19,4 +19,13 @@ export class AppComponent {
         postalcode:new FormControl('')
       })
     });
+
+    loadApiData(){
+      console.log('cliick');
+      this.registrationForm.patchValue({
+        username:'Bruce',
+        password:'apple',
+        repassword:'apple'
+      });
+    }
 }

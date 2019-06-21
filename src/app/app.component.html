@@ -32,7 +32,9 @@
   </div>
 </div>
   <button type="submit" class="btn btn-success">Submit</button>
+  
 </form>
+<button (click)="loadApiData()" type="button" class="btn btn-secondary ml-2">Load Api</button>
 {{registrationForm.value | json}}
 </div>
 <router-outlet></router-outlet>
