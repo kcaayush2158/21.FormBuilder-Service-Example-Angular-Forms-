@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -8,18 +8,20 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class AppComponent {
   title = 'CreatingTheFormModel';
+  constructor(private fb:FormBuilder){
 
-  registrationForm = new FormGroup({
-      username : new FormControl('AAYUSH'),
-      password: new FormControl(''),
-      repassword :new FormControl(''),
-      address: new FormGroup({
-        city:new FormControl(''),
-        state:new FormControl(''),
-        postalcode:new FormControl('')
-      })
-    });
-
+  }
+  registrationForm = this.fb.group({
+    username:['aayushkc2158'],
+    password:[''],
+    repassword:[''],
+    address:this.fb.group({
+      city:[''],
+      state:[''],
+      postalcode:['']
+    })
+    
+  })
     loadApiData(){
       console.log('cliick');
       this.registrationForm.patchValue({
